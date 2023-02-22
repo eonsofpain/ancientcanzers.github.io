@@ -1,0 +1,122 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Spartan';
+}
+body{
+    background-image: url("images/background-backups.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    background-color: rgb(0,0,0,0.5);
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 17px 28px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(203,139,28);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+section .aboutus-pic{
+    width: 20%;
+    margin-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+section p{
+    margin-top: 25px;
+    color: #fff;
+    text-align: center;
+}
+footer{
+    margin-top: auto;
+    text-align: center;
+    background: rgb(0,0,0,0.5)
+}
+footer p {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Exo 2';
+    margin-bottom: 5px;
+}
+.social-buttons a{
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 20px;
+    width: 40px;
+    height: 60px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+  }
+  .social-buttons a::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /*background: linear-gradient(45deg,rgb(203,139,28),rgb(164,20,28));*/
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+  }
+  .social-buttons a:hover::before{
+    transform: scale(0);
+  }
+  .social-buttons a i{
+    transition: 0.3s ease-in;
+  }
+  .social-buttons a:hover i{
+    background: linear-gradient(80deg,rgb(164,20,28),rgb(203,139,28));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(2.2);
+  }
+
+  @media (max-width: 720px) {
+    .nav-links ul li{
+        padding: 0%;
+        display: block;
+        text-align: center;
+    }
+    .nav-links ul li a{
+        font-size: 11px;
+    }
+    .social-buttons a{
+        font-size: 15px;
+        width: 13px;
+    }
+  }

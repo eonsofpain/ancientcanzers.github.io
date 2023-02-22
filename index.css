@@ -1,0 +1,229 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Spartan';
+}
+body{
+    background-image: url("images/background-main.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    display: flex;
+    background-color: rgb(0,0,0,0.5);
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links{
+    flex: 1;
+    text-align: center;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 17px 28px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(203,139,28);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li :hover::after{
+    width: 100%;
+}
+.acz-home h1{
+    font-family: 'Exo 2';
+    color: #fff;
+    font-size: 90px;
+    font-weight: 100;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+.acz-home p{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.acz-pic{
+    height: 65%;
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+}
+.quotes-btn {
+    font-family: 'Exo 2';
+    padding: 0.6em 2em;
+    margin-left: 100px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .quotes-btn:before {
+    content: "";
+    background: linear-gradient(
+      45deg, 
+      rgb(164,20,28),
+      rgb(203,139,28),
+      rgb(176,63,28),
+      rgb(185,92,28),
+      rgb(172,43,28),
+      rgb(164,36,28),
+      rgb(164,28,28),
+      rgb(168,20,28),
+      rgb(168,20,28)
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .quotes-btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+footer{
+    margin-top: auto;
+    text-align: center;
+    background: rgb(0,0,0,0.5)
+}
+footer p {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Exo 2';
+    margin-bottom: 5px;
+}
+.social-buttons a{
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 20px;
+    width: 40px;
+    height: 60px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+  }
+  .social-buttons a::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    /*background: linear-gradient(45deg,rgb(203,139,28),rgb(164,20,28));*/
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+  }
+  .social-buttons a:hover::before{
+    transform: scale(0);
+  }
+  .social-buttons a i{
+    transition: 0.3s ease-in;
+  }
+  .social-buttons a:hover i{
+    background: linear-gradient(80deg,rgb(164,20,28),rgb(203,139,28));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(2.2);
+  }
+
+  @media (max-width: 720px) {
+    .nav-links ul li{
+        padding: 0%;
+        display: block;
+        text-align: center;
+    }
+    .nav-links ul li a{
+        font-size: 11px;
+    }
+    .acz-home h1{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 50px;
+        margin-right: 100px;
+    }
+    .acz-home p{
+        text-align: center;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-right: 100px;
+    }
+    .acz-pic{
+        margin-top: 50px;
+        height: 30%;
+    }
+    footer p{
+        text-align: center;
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .social-buttons a{
+        font-size: 15px;
+        width: 13px;
+    }
+    .quotes-btn{
+        position: relative;
+        margin-top: 10px;
+        padding-left: 75px;
+        padding-right: 80px;
+    }
+    section .button{
+        padding-left: 50px;
+    }
+  }
